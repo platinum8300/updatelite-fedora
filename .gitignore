@@ -1,0 +1,25 @@
+# Development tools
+.claude/
+
+# Logs
+*.log
+logs/
+
+# Cache
+*.cache
+__pycache__/
+
+# Editor
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+*.bak
+*.tmp

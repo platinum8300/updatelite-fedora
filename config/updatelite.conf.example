@@ -1,0 +1,67 @@
+# ==============================================================================
+# updateLITE · Fedora Edition - Configuración
+# ==============================================================================
+#
+# Copia este archivo a ~/.config/updatelite/config y modifícalo según tus
+# preferencias.
+#
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Módulos de actualización
+# ------------------------------------------------------------------------------
+
+# Actualizar sistema con DNF5
+ENABLE_DNF=true
+
+# Mostrar información de repositorios COPR
+ENABLE_COPR=true
+
+# Actualizar aplicaciones Flatpak
+ENABLE_FLATPAK=true
+
+# Limpiar contenedores Podman
+ENABLE_PODMAN=false
+
+# Actualizar firmware del sistema
+ENABLE_FIRMWARE=true
+
+# ------------------------------------------------------------------------------
+# Limpieza del sistema
+# ------------------------------------------------------------------------------
+
+# Eliminar paquetes huérfanos (dependencias no utilizadas)
+CLEANUP_ORPHANS=true
+
+# Limpiar cache de DNF5
+CLEANUP_CACHE=true
+
+# Optimizar logs del sistema (journalctl)
+CLEANUP_JOURNAL=true
+
+# Días de retención de logs (journalctl --vacuum-time)
+JOURNAL_VACUUM_DAYS=7
+
+# ------------------------------------------------------------------------------
+# Opciones generales
+# ------------------------------------------------------------------------------
+
+# Habilitar logging persistente
+ENABLE_LOGGING=false
+
+# Directorio de logs (solo si ENABLE_LOGGING=true)
+LOG_DIR=$HOME/logs/updatelite
+
+# Mostrar frases motivacionales
+ENABLE_PHRASES=true
+
+# Usar colores en la salida
+ENABLE_COLORS=true
+
+# ------------------------------------------------------------------------------
+# Paquetes críticos
+# ------------------------------------------------------------------------------
+
+# Paquetes que requieren reinicio cuando se actualizan
+# Separados por espacios
+CRITICAL_PACKAGES="kernel systemd glibc dracut grub2 mesa fwupd"
